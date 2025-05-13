@@ -1,0 +1,27 @@
+agemarket_data_task:
+  description: >
+    Read the portfolio.json file and fetch current market data for each stock listed. 
+    Return a structured summary of prices, changes, market cap, and performance relative to the buy price.
+  expected_output: >
+    A dictionary with each stock and its current metrics: price, percent change, and gain/loss.
+
+sec_filing_task:
+  description: >
+    For each stock symbol in the portfolio, retrieve and summarize the latest 10-K or 10-Q SEC filings.
+    Focus on risk factors, earnings results, outlook statements, and red flags.
+  expected_output: >
+    A bullet-point summary for each stock with key findings from the most recent filing.
+
+indexing_task:
+  description: >
+    Index all retrieved market data and SEC summaries into a FAISS vector store.
+    Also embed relevant parts of the portfolio.json to support future queries.
+  expected_output: >
+    Confirmation that all relevant content was indexed and is available for semantic retrieval.
+
+report_generation_task:
+  description: >
+    Use all indexed data to respond to the user’s natural language query or generate a daily briefing report.
+    The output should be clear, concise, and delivered in Markdown.
+  expected_output: >
+    A complete Markdown report answering the user's question or summarizing portfolio performance.

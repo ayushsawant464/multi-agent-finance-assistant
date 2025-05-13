@@ -18,7 +18,7 @@ An open-source, multi-agent voice-enabled assistant that delivers daily market b
 
 
 ##  Architecture Overview
-
+![alt text](docs/architecture.png)
 
 ### Components
 - `/agents`: Specialized agents (API, Scraper, Retriever, LLM, Voice)
@@ -36,4 +36,18 @@ An open-source, multi-agent voice-enabled assistant that delivers daily market b
 git clone https://github.com/ayushsawant464/multi-agent-finance-assistant
 cd multi-agent-finance-assistance
 pip install -r requirements.txt
+```
+Frontend (8501)
+```bash
+streamlit run streamlit_app/main.py
+```
 
+Ollama/mistral server
+```bash
+ollama run mistral
+```
+
+Backend (8000)
+```bash
+uvicorn orchestrator.router:app --reload
+```

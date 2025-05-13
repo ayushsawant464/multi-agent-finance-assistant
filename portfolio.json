@@ -1,0 +1,24 @@
+{
+  "portfolio": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "quantity": 50,
+      "average_buy_price": 145.32,
+      "purchase_date": "2023-07-15"
+    }
+    
+  ],
+  "watchlist": [
+    {
+      "symbol": "TSLA",
+      "name": "Tesla Inc.",
+      "sector": "Automotive",
+      "quantity": 0,
+      "average_buy_price": 0,
+      "purchase_date": null
+    }
+  
+  ]
+}
